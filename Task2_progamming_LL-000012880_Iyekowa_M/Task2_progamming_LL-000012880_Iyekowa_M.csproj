@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Task2_progamming_LL_000012880_Iyekowa_M</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="african-lion-portrait-warm-light.jpg" />
+    <None Remove="csm_safari-map-02-2024_7880c789f6.jpg" />
+    <None Remove="safari zoo.png" />
+    <None Remove="Social Media Icon Set with X.png" />
+    <None Remove="wheelchair.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="african-lion-portrait-warm-light.jpg" />
+    <Resource Include="csm_safari-map-02-2024_7880c789f6.jpg" />
+    <Resource Include="safari zoo.png" />
+    <Resource Include="Social Media Icon Set with X.png" />
+    <Resource Include="wheelchair.png" />
+  </ItemGroup>
+
+</Project>
