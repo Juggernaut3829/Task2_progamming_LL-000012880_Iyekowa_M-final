@@ -38,7 +38,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 conn.Open();
 
                 // Use parameterized query to prevent SQL injection
-                string login = "SELECT  email, password  FROM Accounts " +
+                string login = "SELECT  email, password  FROM account " +
                                "WHERE email = @email AND password = SHA2(@password, 256)";
                 MySqlCommand cmd = new MySqlCommand(login, conn);
 
@@ -47,7 +47,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 cmd.Parameters.AddWithValue("@password", Password.Password);
                 cmd.ExecuteReader();
                 conn.Close();
-                MessageBox.Show("Welcome back{First Name}");
+                MessageBox.Show("Welcome back" FirstName);
             }
             catch (Exception ex)
             {

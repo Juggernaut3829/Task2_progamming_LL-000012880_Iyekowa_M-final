@@ -187,29 +187,37 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
         private void Style_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            conn = new MySqlConnection(connStr);
-            conn.Open();
-            string selectedStyle = Style.SelectedItem.ToString();
-            string query = "SELECT RoomID, RoomName, IsWheelchairAccessible FROM rooms WHERE RoomStyle = @Style";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Style", selectedStyle);
+         
+            
+                conn = new MySqlConnection(connStr);
+                conn.Open();
+                string selectedStyle = Style.SelectedItem.ToString();
+                bool wheelchairAccessible = check.IsChecked ?? false; // Check if the checkbox is checked
+                string query = "SELECT RoomID, RoomName, IsWheelchairAccessible, Capacity FROM rooms WHERE RoomStyle = @Style AND IsWheelchairAccessible = @WheelchairAccessible AND Capacity >= @Capacity";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Style", selectedStyle);
+                cmd.Parameters.AddWithValue("@WheelchairAccessible", wheelchairAccessible);
+                cmd.Parameters.AddWithValue("@Capacity", int.Parse(NumAdultTB.Text) + int.Parse(NumChildrenTB.Text));
 
-            Room.Items.Clear(); // Clear previous items
+                Room.Items.Clear(); // Clear previous items
 
-            using (MySqlDataReader reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
+                using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    string roomName = reader.GetString("RoomName");
-                    int roomID = reader.GetInt32("RoomID");
-                    bool wheelchairAccessible = reader.GetBoolean("IsWheelchairAccessible");
+                    while (reader.Read())
+                    {
+                        string roomName = reader.GetString("RoomName");
+                        int roomID = reader.GetInt32("RoomID");
+                        bool isWheelchairAccessible = reader.GetBoolean("IsWheelchairAccessible");
+                        int capacity = reader.GetInt32("Capacity");
 
-                    string displayText = $"{roomName} (ID: {roomID}) - Wheelchair Accessible: {(wheelchairAccessible ? "Yes" : "No")}";
-                    Room.Items.Add(displayText);
+                        string displayText = $"{roomName} (ID: {roomID}) - Wheelchair Accessible: {(isWheelchairAccessible ? "Yes" : "No")}, Capacity: {capacity}";
+                        Room.Items.Add(displayText);
+                    }
                 }
-            }
 
-            conn.Close();
+                conn.Close();
+            
+
 
         }
 

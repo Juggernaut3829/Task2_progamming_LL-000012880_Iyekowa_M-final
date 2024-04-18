@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,13 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
     /// </summary>
     public partial class Visiting : Window
     {
+        string connStr = "server=ND-COMPSCI;" +
+               "user=TL_S2201379;" +
+               "database=tl_s2201379_ocp;" +
+               "port=3306;" +
+               "password=Notre100606";
+        MySqlConnection conn;
+        // Schema name here
         public Visiting()
         {
             InitializeComponent();
@@ -122,11 +130,23 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
         private void booking_Click(object sender, RoutedEventArgs e)
         {
+            conn = new MySqlConnection(connStr);
+            conn.Open();
+            string insert = "INSERT INTO visit( NumGuest, TicketType, Date) " +
+               "VALUE (@numGuest,@ticket,@Date)";
+            MySqlCommand cmd = new MySqlCommand(insert, conn);
+            // Use parameters to avoid SQL injection and improve security
+            cmd.Parameters.AddWithValue("@numGuest", NumTB.Text);
+            cmd.Parameters.AddWithValue("@ticket",Type.Text);
+            cmd.Parameters.AddWithValue("@Date", Date.Text);
+            cmd.ExecuteNonQuery();
+            
 
         }
 
         private void Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
 
         }
     }

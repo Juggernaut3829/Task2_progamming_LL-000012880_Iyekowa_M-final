@@ -9,12 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="African-Elephant-71-Sutton-600.png" />
     <None Remove="african-lion-portrait-warm-light.jpg" />
     <None Remove="csm_safari-map-02-2024_7880c789f6.jpg" />
+    <None Remove="download.jpg" />
+    <None Remove="image-Rhino-Lodge-03.png" />
+    <None Remove="Lion-Lion-Lodges-01-768x512.jpg" />
     <None Remove="NicePng_gray-circle-png_1366211.png" />
+    <None Remove="photo-tiger-600px.png" />
     <None Remove="safari zoo.png" />
     <None Remove="Social Media Icon Set with X.png" />
     <None Remove="wheelchair.png" />
+    <None Remove="wild-dog-800px.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,12 +28,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="African-Elephant-71-Sutton-600.png" />
     <Resource Include="african-lion-portrait-warm-light.jpg" />
     <Resource Include="csm_safari-map-02-2024_7880c789f6.jpg" />
+    <Resource Include="download.jpg" />
+    <Resource Include="image-Rhino-Lodge-03.png" />
+    <Resource Include="Lion-Lion-Lodges-01-768x512.jpg" />
     <Resource Include="NicePng_gray-circle-png_1366211.png" />
+    <Resource Include="photo-tiger-600px.png" />
     <Resource Include="safari zoo.png" />
     <Resource Include="Social Media Icon Set with X.png" />
     <Resource Include="wheelchair.png" />
+    <Resource Include="wild-dog-800px.jpg" />
   </ItemGroup>
 
 </Project>

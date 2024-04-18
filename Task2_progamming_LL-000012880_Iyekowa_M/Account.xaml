@@ -39,18 +39,11 @@
         <Label Content="Last" HorizontalAlignment="Left" Margin="22,248,0,0" VerticalAlignment="Top"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="21,279,0,0" VerticalAlignment="Top"/>
         <Label Content="Password" HorizontalAlignment="Left"  Margin="21,305,0,0" VerticalAlignment="Top" />
-        <Label Content="Prior Booking" HorizontalAlignment="Left"  Margin="219,125,0,0" VerticalAlignment="Top" />
-        <Label Content="Current Booking" HorizontalAlignment="Left"  Margin="212,243,0,0" VerticalAlignment="Top" />
-        <Label Content="Visits" HorizontalAlignment="Left" Margin="431,127,0,0" VerticalAlignment="Top" />
-        <Label Content="Settings" HorizontalAlignment="Left"  Margin="665,133,0,0" VerticalAlignment="Top" />
-        <Label Content="Accesability panel" HorizontalAlignment="Left" Margin="665,154,0,0" VerticalAlignment="Top" />
-        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
-        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
-        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
-        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
-        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
-        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
-        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Label Content="Prior Booking" HorizontalAlignment="Left"  Margin="212,122,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" />
+        <Label Content="Current Booking" HorizontalAlignment="Left"  Margin="207,229,0,0" VerticalAlignment="Top" />
+        <Label Content="Visits" HorizontalAlignment="Left" Margin="423,127,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" />
+        <Label Content="Settings" HorizontalAlignment="Left"  Margin="618,120,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" />
+        <Label Content="Accesability panel" HorizontalAlignment="Left" Margin="618,146,0,0" VerticalAlignment="Top" />
         <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
         <Rectangle HorizontalAlignment="Left" Height="204" Margin="200,127,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black"/>
         <Rectangle HorizontalAlignment="Left" Height="204" Margin="400,127,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black"/>
@@ -59,6 +52,10 @@
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <Button Name="btnrest" Content="Rest password here" HorizontalAlignment="Left" Height="25" Margin="10,354,0,0" VerticalAlignment="Top" Width="125" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnrest_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="32" Margin="618,197,0,0" VerticalAlignment="Top" Width="162"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="32" Margin="618,243,0,0" VerticalAlignment="Top" Width="162"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="32" Margin="618,290,0,0" VerticalAlignment="Top" Width="162"/>
     </Grid>
 
 </Window>

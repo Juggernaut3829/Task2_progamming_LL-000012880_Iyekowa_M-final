@@ -119,5 +119,16 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             account.Show();
 
         }
+
+        private void discount_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("promotion has been aplied when you check out");
+        }
+
+        private void priceOff_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("promotion has been aplied when you check out");
+
+        }
     }
 }

@@ -102,7 +102,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 conn.Open();
 
                 // Insert user details into the database
-                string check = $"INSERT INTO customers (FirstName, LastName, Email, Password) VALUES (@firstName, @lastName, @email, SHA2(@password, 256))";
+                string check = $"INSERT INTO account (FirstName, LastName, Email, Password) VALUES (@firstName, @lastName, @email, SHA2(@password, 256))";
                 MySqlCommand cmd = new MySqlCommand(check, conn);
 
                 cmd.Parameters.AddWithValue("@firstName", FirstName.Text);
