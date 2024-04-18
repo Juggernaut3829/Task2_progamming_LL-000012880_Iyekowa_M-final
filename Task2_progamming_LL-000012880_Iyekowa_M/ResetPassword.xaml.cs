@@ -36,24 +36,24 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
 
             // Validate email
-            if (string.IsNullOrEmpty(email.Text))
+            if (string.IsNullOrEmpty(Email.Text))
             {
                 MessageBox.Show("Please enter your email.");
                 return false;
             }
-            else if (!IsValidemail(email.Text))
+            else if (!IsValidemail(Email.Text))
             {
                 MessageBox.Show("Please enter a valid email address.");
                 return false;
             }
 
             // Validate password
-            if (string.IsNullOrEmpty(password.Password))
+            if (string.IsNullOrEmpty(Pass.Password))
             {
                 MessageBox.Show("Please enter your new password.");
                 return false;
             }
-            else if (password.Password.Length < 6)
+            else if (Password.Password.Length < 6)
             {
                 MessageBox.Show("password must be at least 6 characters long.");
                 return false;
@@ -61,12 +61,12 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
 
             // Validate password
-            if (string.IsNullOrEmpty(Confirmpass.Password))
+            if (string.IsNullOrEmpty(Password.Password))
             {
                 MessageBox.Show("Please enter your new password.");
                 return false;
             }
-            else if (Confirmpass.Password.Length < 6)
+            else if (Password.Password.Length < 6)
             {
                 MessageBox.Show("password must be at least 6 characters long.");
                 return false;
@@ -106,18 +106,15 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 string check = $"INSERT INTO Account (password) VALUES (SHA2(@password, 256))";
                 MySqlCommand cmd = new MySqlCommand(check, conn);
 
-                cmd.Parameters.AddWithValue("@email", email.Text);
-                cmd.Parameters.AddWithValue("@password", Confirmpass.Password);
-
-                int rowsAffected = cmd.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Registration successful. Please sign in.");
-                    Login login = new Login();
-                    login.Show();
-                    this.Close(); // Close registration window after successful registration
-                }
+                cmd.Parameters.AddWithValue("@email", Email.Text);
+                cmd.Parameters.AddWithValue("@password", Password.Password);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Registration successful. Please sign in.");
+                Login login = new Login();
+                login.Show();
+                this.Close(); // Close registration window after successful registration
+                
 
             }
             catch (Exception ex)
@@ -217,6 +214,13 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             terms.Show();
         }
 
-       
+        private void access_Click(object sender, RoutedEventArgs e)
+        {
+            Account account = new Account();
+            this.Close();
+            account.Show();
+
+        }
+
     }
 }

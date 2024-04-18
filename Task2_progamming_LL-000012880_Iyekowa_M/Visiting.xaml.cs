@@ -112,5 +112,22 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             this.Close();
             terms.Show();
         }
+        private void access_Click(object sender, RoutedEventArgs e)
+        {
+            Account account = new Account();
+            this.Close();
+            account.Show();
+
+        }
+
+        private void booking_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

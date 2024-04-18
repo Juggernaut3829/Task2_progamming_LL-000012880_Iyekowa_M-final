@@ -7,6 +7,58 @@
         mc:Ignorable="d"
         Title="Account" Height="450" Width="800">
     <Grid>
-        
+        <Rectangle HorizontalAlignment="Center" Height="50" Margin="0,384,0,0" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="#FF1E635F"/>
+
+        <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="194" Width="197" BorderBrush="{x:Null}" Margin="-35,-43,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="/safari zoo.png"/>
+            </Button.Background>
+
+        </Button>
+        <Rectangle HorizontalAlignment="Left" Height="2" Margin="130,69,0,0" Stroke="Black" VerticalAlignment="Top" Width="695"/>
+
+        <Button Name="Accountt" Content="Account" HorizontalAlignment="Left" Height="31" Margin="145,33,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF0C21D0" FontWeight="Bold" Click="Account_Click"/>
+        <Button Name="Map" Content="Map" HorizontalAlignment="Left" Height="31" Margin="219,33,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Map_Click"/>
+        <Button Name="Book" Content="Booking" HorizontalAlignment="Left" Height="31" Margin="281,33,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Book_Click"/>
+        <Button Name="Vist" Content="Visiting" HorizontalAlignment="Left" Height="31" Margin="355,33,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Vist_Click"/>
+        <Button Name="History" Content="About us" HorizontalAlignment="Left" Height="31" Margin="431,33,0,0" VerticalAlignment="Top" Width="59"   BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="History_Click"/>
+        <Button Name="Articles" Content="Infomation" HorizontalAlignment="Left" Height="31" Margin="504,33,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Articles_Click"/>
+        <Button Name="Login" Content="Login" HorizontalAlignment="Left" Height="31" Margin="600,33,0,0" VerticalAlignment="Top" Width="61" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Login_Click"/>
+        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="665,33,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
+        <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Home_Click"/>
+        <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,394,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Deal_Click"/>
+        <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,394,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Message_Click"/>
+        <Button Name="Policy" Content="Policy" HorizontalAlignment="Left" Height="30" Margin="401,395,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Policy_Click"/>
+        <Button Name="Ts_and_Cs" Content="Terms and Conditions" HorizontalAlignment="Left" Height="31" Margin="450,395,0,0" VerticalAlignment="Top" Width="134" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Ts_and_Cs_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="90" Margin="16,127,0,0" VerticalAlignment="Top" Width="94">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/NicePng_gray-circle-png_1366211.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="First" HorizontalAlignment="Left" Margin="21,222,0,0" VerticalAlignment="Top"/>
+        <Label Content="Last" HorizontalAlignment="Left" Margin="22,248,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="21,279,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" HorizontalAlignment="Left"  Margin="21,305,0,0" VerticalAlignment="Top" />
+        <Label Content="Prior Booking" HorizontalAlignment="Left"  Margin="219,125,0,0" VerticalAlignment="Top" />
+        <Label Content="Current Booking" HorizontalAlignment="Left"  Margin="212,243,0,0" VerticalAlignment="Top" />
+        <Label Content="Visits" HorizontalAlignment="Left" Margin="431,127,0,0" VerticalAlignment="Top" />
+        <Label Content="Settings" HorizontalAlignment="Left"  Margin="665,133,0,0" VerticalAlignment="Top" />
+        <Label Content="Accesability panel" HorizontalAlignment="Left" Margin="665,154,0,0" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
+        <Rectangle HorizontalAlignment="Left" Height="204" Margin="200,127,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="204" Margin="400,127,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="204" Margin="600,127,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
     </Grid>
+
 </Window>

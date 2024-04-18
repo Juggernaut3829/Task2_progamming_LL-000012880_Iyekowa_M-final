@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="african-lion-portrait-warm-light.jpg" />
     <None Remove="csm_safari-map-02-2024_7880c789f6.jpg" />
+    <None Remove="NicePng_gray-circle-png_1366211.png" />
     <None Remove="safari zoo.png" />
     <None Remove="Social Media Icon Set with X.png" />
     <None Remove="wheelchair.png" />
@@ -23,6 +24,7 @@
   <ItemGroup>
     <Resource Include="african-lion-portrait-warm-light.jpg" />
     <Resource Include="csm_safari-map-02-2024_7880c789f6.jpg" />
+    <Resource Include="NicePng_gray-circle-png_1366211.png" />
     <Resource Include="safari zoo.png" />
     <Resource Include="Social Media Icon Set with X.png" />
     <Resource Include="wheelchair.png" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using System.Xml.Schema;
 
 namespace Task2_progamming_LL_000012880_Iyekowa_M
 {
@@ -19,6 +22,13 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
     /// </summary>
     public partial class Booking : Window
     {
+        string connStr = "server=ND-COMPSCI;" +
+                 "user=TL_S2201379;" +
+                 "database=tl_s2201379_ocp;" + 
+                 "port=3306;" +
+                 "password=Notre100606";
+        MySqlConnection conn;
+        // Schema name here
         public Booking()
         {
             InitializeComponent();
@@ -112,5 +122,122 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             this.Close();
             terms.Show();
         }
+        private void access_Click(object sender, RoutedEventArgs e)
+        {
+            Account account = new Account();
+            this.Close();
+            account.Show();
+
+        }
+
+        private void booking_Click(object sender, RoutedEventArgs e)
+        { 
+            
+            try
+            {
+                conn = new MySqlConnection(connStr);
+                conn.Open();
+                string insert = "INSERT INTO booking (StartDate, EndDate, Style, NumAdult, NumChildren, Capacity, Quantity) " +
+                             "VALUES (@StartDate, @EndDate, , @Style, @NumAdult, @NumChildren,@Available)";
+                MySqlCommand cmd = new MySqlCommand(insert, conn);
+                cmd.Parameters.AddWithValue("@StartDate", StartDate);
+                cmd.Parameters.AddWithValue("@EndDate", EndDate);
+                cmd.Parameters.AddWithValue("@Style", Style);
+                cmd.Parameters.AddWithValue("@NumAdult", NumAdultTB);
+                cmd.Parameters.AddWithValue("@NumChildren", NumChildrenTB);
+                cmd.Parameters.AddWithValue("@Available", Room);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Booking successful!");
+                // Clear input fields or navigate to another page
+                
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Booking failed!");
+            }
+            conn.Close();
+        }
+
+        private bool ValidateInput()
+        {
+            // Basic validation for required fields
+            if (StartDate.SelectedDate == null || EndDate.SelectedDate == null ||
+                string.IsNullOrEmpty(Room.Text)  || string.IsNullOrEmpty(Style.Text) ||
+                string.IsNullOrEmpty(NumAdultTB.Text) || string.IsNullOrEmpty(NumChildrenTB.Text))
+                
+            {
+                MessageBox.Show("Please fill in the fields to confirm a booking.");
+                return false;
+            }
+            // Add validation for numeric fields
+            int numAdult, numChildren;
+            if (!int.TryParse(NumAdultTB.Text, out numAdult) || !int.TryParse(NumChildrenTB.Text, out numChildren)) 
+                
+            {   MessageBox.Show("Please fill in the fields so we can asigin a room for you and other guests.");
+                return false;
+            }
+
+            return true;
+        }
+
+        
+
+        private void Style_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            conn = new MySqlConnection(connStr);
+            conn.Open();
+            string selectedStyle = Style.SelectedItem.ToString();
+            string query = "SELECT RoomID, RoomName, IsWheelchairAccessible FROM rooms WHERE RoomStyle = @Style";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@Style", selectedStyle);
+
+            Room.Items.Clear(); // Clear previous items
+
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    string roomName = reader.GetString("RoomName");
+                    int roomID = reader.GetInt32("RoomID");
+                    bool wheelchairAccessible = reader.GetBoolean("IsWheelchairAccessible");
+
+                    string displayText = $"{roomName} (ID: {roomID}) - Wheelchair Accessible: {(wheelchairAccessible ? "Yes" : "No")}";
+                    Room.Items.Add(displayText);
+                }
+            }
+
+            conn.Close();
+
+        }
+
+        private void Room_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            conn = new MySqlConnection(connStr);
+            conn.Open();
+            string insert = "SELECT RoomName FROM rooms";
+            MySqlCommand cmd = new MySqlCommand(insert, conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            Room.Items.Clear(); // Clear previous items
+
+            // Check if there are rows returned
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    string roomName = reader.GetString("RoomName");
+                    Room.Items.Add(roomName);
+                }
+            }
+
+            // Close the reader and the connection
+            reader.Close();
+            conn.Close();
+        }
+
     }
+    
 }

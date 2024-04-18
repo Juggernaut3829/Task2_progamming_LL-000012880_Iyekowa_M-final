@@ -43,8 +43,8 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 MySqlCommand cmd = new MySqlCommand(login, conn);
 
                 // Use parameters to avoid SQL injection and improve security
-                cmd.Parameters.AddWithValue("@email", email.Text);
-                cmd.Parameters.AddWithValue("@password", pass.Password);
+                cmd.Parameters.AddWithValue("@email", Email.Text);
+                cmd.Parameters.AddWithValue("@password", Password.Password);
                 cmd.ExecuteReader();
                 conn.Close();
                 MessageBox.Show("Welcome back{First Name}");
@@ -160,5 +160,14 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             this.Close();
             resetPassword.Show();
         }
+        private void access_Click(object sender, RoutedEventArgs e)
+        {
+            Account account = new Account();
+            this.Close();
+            account.Show();
+
+        }
+
+        
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Task2_progamming_LL_000012880_Iyekowa_M
 {
@@ -20,9 +21,34 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> imagePaths = new List<string>
+    {
+        "/african-lion-portrait-warm-light.jpg",
+        "/spotted-giraffe-close-up-looking-cute-outdoors-generated-by-ai.jpg",
+        "/male-female-lions-laying-sand-resting.jpg",
+        
+        // Add more image paths as needed
+        // Add more image paths as needed
+    };
+
+        private int currentIndex = 0;
+        private DispatcherTimer timer;
         public MainWindow()
         {
             InitializeComponent();
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(5);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Increment index or loop back to 0 if reached the end
+            currentIndex = (currentIndex + 1) % imagePaths.Count;
+
+            // Set the next image path
+            string nextImagePath = imagePaths[currentIndex];
+            imageBrush.ImageSource = new BitmapImage(new Uri(nextImagePath, UriKind.Relative));
         }
         private void Account_Click(object sender, RoutedEventArgs e)
         {
@@ -111,6 +137,13 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             Terms terms = new Terms();
             this.Close();
             terms.Show();
+        }
+        private void access_Click(object sender, RoutedEventArgs e)
+        {
+            Account account = new Account();
+            this.Close();
+            account.Show();
+
         }
     }
 }

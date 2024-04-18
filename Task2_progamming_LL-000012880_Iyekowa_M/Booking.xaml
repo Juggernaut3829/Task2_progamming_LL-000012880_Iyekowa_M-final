@@ -24,18 +24,32 @@
         <Button Name="History" Content="About us" HorizontalAlignment="Left" Height="31" Margin="431,65,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="History_Click"/>
         <Button Name="Articles" Content="Infomation" HorizontalAlignment="Left" Height="31" Margin="504,65,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Articles_Click"/>
         <Button Name="Login" Content="Login" HorizontalAlignment="Left" Height="31" Margin="600,65,0,0" VerticalAlignment="Top" Width="61" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Login_Click"/>
-        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="666,65,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
+        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="665,65,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
         <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Home_Click"/>
         <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,394,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Deal_Click"/>
         <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,394,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Message_Click"/>
         <Button Name="Policy" Content="Policy" HorizontalAlignment="Left" Height="30" Margin="401,395,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Policy_Click"/>
         <Button Name="Ts_and_Cs" Content="Terms and Conditions" HorizontalAlignment="Left" Height="31" Margin="450,395,0,0" VerticalAlignment="Top" Width="134" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Ts_and_Cs_Click"/>
-        <Button Content="" HorizontalAlignment="Left" Height="35" Margin="739,388,0,0" VerticalAlignment="Top" Width="42"  BorderBrush="{x:Null}" FontWeight="Bold">
+        <Button Name="access" Content="" HorizontalAlignment="Left" Height="35" Margin="739,388,0,0" VerticalAlignment="Top" Width="42"  BorderBrush="{x:Null}" FontWeight="Bold" Click="access_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/wheelchair.png"/>
             </Button.Background>
+        </Button>
+        <Label Content="Start Date:" HorizontalAlignment="Left" Height="29" Margin="120,130,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label Content="End Date:" HorizontalAlignment="Left" Height="23" Margin="120,201,0,0" VerticalAlignment="Top" Width="146"/>
+        <Label  Content="Style:" HorizontalAlignment="Left" Height="37" Margin="117,283,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label Content="Number of Adults:" HorizontalAlignment="Left" Height="27" Margin="383,185,0,0" VerticalAlignment="Top" Width="167"/>
+        <Label Content="Number of Children:" HorizontalAlignment="Left" Height="23" Margin="382,121,0,0" VerticalAlignment="Top" Width="168"/>
+        <TextBox Name="NumAdultTB" HorizontalAlignment="Left" Height="31" Margin="383,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"  BorderBrush="Black"/>
+        <TextBox  Name="NumChildrenTB" HorizontalAlignment="Left" Height="31" Margin="383,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"  BorderBrush="Black"/>
+        <ComboBox Name="Style" HorizontalAlignment="Left" Height="33" Margin="130,313,0,0" VerticalAlignment="Top" Width="192" SelectionChanged="Style_SelectionChanged"/>
+        <Button Name="booking" Content="Book" HorizontalAlignment="Left" Height="26" Margin="390,320,0,0" VerticalAlignment="Top" Width="168" Click="booking_Click"/>
+        <DatePicker Name="StartDate" HorizontalAlignment="Left" Height="49" Margin="120,155,0,0" VerticalAlignment="Top" Width="211"/>
+        <DatePicker Name="EndDate" HorizontalAlignment="Left" Height="50" Margin="120,228,0,0" VerticalAlignment="Top" Width="211"/>
+        <Label Content="Avaliblity" HorizontalAlignment="Left" Height="24" Margin="384,252,0,0" VerticalAlignment="Top" Width="160"/>
+        <ComboBox Name="Room" HorizontalAlignment="Left" Height="26" Margin="388,276,0,0" VerticalAlignment="Top" Width="162" SelectionChanged="Room_SelectionChanged" />
+        
 
 
-        </Button> 
     </Grid>
 </Window>

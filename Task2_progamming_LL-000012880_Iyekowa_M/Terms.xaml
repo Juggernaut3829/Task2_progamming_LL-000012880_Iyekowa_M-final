@@ -23,7 +23,7 @@
         <Button Name="History" Content="About us" HorizontalAlignment="Left" Height="31" Margin="431,65,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="History_Click"/>
         <Button Name="Articles" Content="Infomation" HorizontalAlignment="Left" Height="31" Margin="504,65,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Articles_Click"/>
         <Button Name="Login" Content="Login" HorizontalAlignment="Left" Height="31" Margin="600,65,0,0" VerticalAlignment="Top" Width="61" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Login_Click"/>
-        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="666,65,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
+        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="665,65,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
         <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Home_Click"/>
         <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,394,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Deal_Click"/>
         <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,394,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Message_Click"/>
@@ -45,13 +45,12 @@
             <LineBreak/><Run Text="By booking a ticket, visitors agree to abide by these terms and conditions."/></TextBlock>
   
         </ScrollViewer>
-        
-        <Button Content="" HorizontalAlignment="Left" Height="35" Margin="739,388,0,0" VerticalAlignment="Top" Width="42"  BorderBrush="{x:Null}" FontWeight="Bold">
+
+        <Button Name="access" Content="" HorizontalAlignment="Left" Height="35" Margin="739,388,0,0" VerticalAlignment="Top" Width="42"  BorderBrush="{x:Null}" FontWeight="Bold" Click="access_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/wheelchair.png"/>
             </Button.Background>
-
         </Button>
-       
+
     </Grid>
 </Window>
