@@ -52,10 +52,18 @@
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
         <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
-        <Button Name="btnrest" Content="Rest password here" HorizontalAlignment="Left" Height="25" Margin="10,354,0,0" VerticalAlignment="Top" Width="125" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnrest_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="32" Margin="618,197,0,0" VerticalAlignment="Top" Width="162"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="32" Margin="618,243,0,0" VerticalAlignment="Top" Width="162"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="32" Margin="618,290,0,0" VerticalAlignment="Top" Width="162"/>
+        <Button Name="btnrest" Content="Rest password here" HorizontalAlignment="Left" Height="25" Margin="10,354,0,0" VerticalAlignment="Top" Width="125" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnrest_Click" FontWeight="Bold"/>
+        <Button Content="Blue light filter" HorizontalAlignment="Left" Height="32" Margin="618,197,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <Button Content=" enlargin font size" HorizontalAlignment="Left" Height="32" Margin="618,243,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <Button Content="delete accont" HorizontalAlignment="Left" Height="32" Margin="618,290,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <Label Content="###" HorizontalAlignment="Left"  Margin="212,158,0,0" VerticalAlignment="Top" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="528,197,0,0" VerticalAlignment="Top" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="414,197,0,0" VerticalAlignment="Top" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="302,154,0,0" VerticalAlignment="Top" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="210,190,0,0" VerticalAlignment="Top" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="318,257,0,0" VerticalAlignment="Top" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="216,293,0,0" VerticalAlignment="Top" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="207,258,0,0" VerticalAlignment="Top" />
     </Grid>
 
 </Window>

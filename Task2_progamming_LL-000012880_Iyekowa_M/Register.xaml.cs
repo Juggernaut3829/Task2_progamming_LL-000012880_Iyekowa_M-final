@@ -25,9 +25,11 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                  "port=3306;" +
                  "password=Notre100606";
         MySqlConnection conn;
+
         public Register()
         {
             InitializeComponent();
+
         }
         private bool ValidateInput()
         {
@@ -100,7 +102,8 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             {
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-
+                // Set user details using RegistrationManager
+                Manager.RegistrationManager.Instance.SetDetails(FirstName.Text, LastName.Text, Email.Text, Password.Password);
                 // Insert user details into the database
                 string check = $"INSERT INTO account (FirstName, LastName, Email, Password) VALUES (@firstName, @lastName, @email, SHA2(@password, 256))";
                 MySqlCommand cmd = new MySqlCommand(check, conn);

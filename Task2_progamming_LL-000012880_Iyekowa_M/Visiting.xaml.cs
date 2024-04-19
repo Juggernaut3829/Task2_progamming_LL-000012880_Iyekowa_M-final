@@ -30,6 +30,56 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         public Visiting()
         {
             InitializeComponent();
+        } 
+        private void continue_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                conn = new MySqlConnection(connStr);
+                conn.Open();
+                    string insert = "INSERT INTO visit(NumGuest, TicketType, Date) VALUES (@numGuest, @ticket, @Date)";
+                    MySqlCommand cmd = new MySqlCommand(insert, conn);
+
+                    // Convert NumTB.Text to integer assuming it represents the number of guests
+                    if (int.TryParse(NumTB.Text, out int numGuest))
+                    {
+                        cmd.Parameters.AddWithValue("@numGuest", numGuest);
+                    }
+                    else
+                    {
+                        // Handle invalid input for the number of guests
+                        MessageBox.Show("Invalid input for the number of guests.");
+                        return;
+                    }
+
+                    // Assuming Type.SelectedItem.ToString() represents the selected ticket type
+                    cmd.Parameters.AddWithValue("@ticket", Type.SelectedItem?.ToString());
+
+                    // Assuming Date.Text represents the selected date
+                    cmd.Parameters.AddWithValue("@Date", Date.Text);
+
+                    cmd.ExecuteNonQuery();
+                
+
+                // Optional: Provide feedback to the user that the booking was successful
+                MessageBox.Show("Booking successful!");
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during database operation
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+
+        }
+
+        private void Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            Type.Items.Add("Single");
+            Type.Items.Add("Group"); 
+            Type.Items.Add("Educational trip");
+            Type.Items.Add("Guided tour");
+
         }
         private void Account_Click(object sender, RoutedEventArgs e)
         {
@@ -128,26 +178,6 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
         }
 
-        private void booking_Click(object sender, RoutedEventArgs e)
-        {
-            conn = new MySqlConnection(connStr);
-            conn.Open();
-            string insert = "INSERT INTO visit( NumGuest, TicketType, Date) " +
-               "VALUE (@numGuest,@ticket,@Date)";
-            MySqlCommand cmd = new MySqlCommand(insert, conn);
-            // Use parameters to avoid SQL injection and improve security
-            cmd.Parameters.AddWithValue("@numGuest", NumTB.Text);
-            cmd.Parameters.AddWithValue("@ticket",Type.Text);
-            cmd.Parameters.AddWithValue("@Date", Date.Text);
-            cmd.ExecuteNonQuery();
-            
-
-        }
-
-        private void Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-
-        }
+       
     }
 }

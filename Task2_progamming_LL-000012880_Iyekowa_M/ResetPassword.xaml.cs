@@ -103,7 +103,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 conn.Open();
 
                 // Insert user details into the database
-                string check = $"INSERT INTO Account (password) VALUES (SHA2(@password, 256))";
+                string check = $"INSERT INTO account (password) VALUES (SHA2(@password, 256))";
                 MySqlCommand cmd = new MySqlCommand(check, conn);
 
                 cmd.Parameters.AddWithValue("@email", Email.Text);

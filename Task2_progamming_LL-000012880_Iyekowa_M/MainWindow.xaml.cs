@@ -26,7 +26,9 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         "/african-lion-portrait-warm-light.jpg",
         "/spotted-giraffe-close-up-looking-cute-outdoors-generated-by-ai.jpg",
         "/male-female-lions-laying-sand-resting.jpg",
-        
+        "/download(1).jpn",
+        "/download(2).jpn",
+        "/download(3).jpn",
         // Add more image paths as needed
         // Add more image paths as needed
     };

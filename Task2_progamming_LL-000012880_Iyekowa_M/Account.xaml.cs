@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Task2_progamming_LL_000012880_Iyekowa_M
 {
     /// <summary>
@@ -19,9 +20,11 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
     /// </summary>
     public partial class Account : Window
     {
+
         public Account()
         {
             InitializeComponent();
+            
         }
         private void Account_Click(object sender, RoutedEventArgs e)
         {

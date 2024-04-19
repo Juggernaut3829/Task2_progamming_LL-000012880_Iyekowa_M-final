@@ -36,32 +36,32 @@
                 <ImageBrush ImageSource="/wheelchair.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="93" Margin="680,172,0,0" VerticalAlignment="Top" Width="121" BorderBrush="{x:Null}">
+        <Button Name="wildDogs" Content="" HorizontalAlignment="Left" Height="93" Margin="680,172,0,0" VerticalAlignment="Top" Width="121" BorderBrush="{x:Null}" Click="wildDogs_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/wild-dog-800px.jpg"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="93" Margin="278,172,0,0" VerticalAlignment="Top" Width="122" BorderBrush="{x:Null}">
+        <Button Name="jaguar" Content="" HorizontalAlignment="Left" Height="93" Margin="278,172,0,0" VerticalAlignment="Top" Width="122" BorderBrush="{x:Null}" Click="jaguar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/download.jpg"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="93" Margin="143,172,0,0" VerticalAlignment="Top" Width="122" BorderBrush="{x:Null}">
+        <Button Name="tiger" Content="" HorizontalAlignment="Left" Height="93" Margin="143,172,0,0" VerticalAlignment="Top" Width="122" BorderBrush="{x:Null}" Click="Tiger_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/photo-tiger-600px.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="93" Margin="550,172,0,0" VerticalAlignment="Top" Width="120" BorderBrush="{x:Null}">
+        <Button Name="rhino" Content="" HorizontalAlignment="Left" Height="93" Margin="550,172,0,0" VerticalAlignment="Top" Width="120" BorderBrush="{x:Null}" Click="rhino_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/image-Rhino-Lodge-03.png"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="121" Margin="6,172,0,0" BorderBrush="{x:Null}">
+        <Button Name="lion" Content="" HorizontalAlignment="Left" Height="93" VerticalAlignment="Top" Width="121" Margin="6,172,0,0" BorderBrush="{x:Null}" Click="Lion_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Lion-Lion-Lodges-01-768x512.jpg"/>
             </Button.Background>
         </Button>
-        <Button Content="" HorizontalAlignment="Left" Height="93" Margin="412,172,0,0" VerticalAlignment="Top" Width="123">
+        <Button Name="elaphent" Content="" HorizontalAlignment="Left" Height="93" Margin="412,172,0,0" VerticalAlignment="Top" Width="123" Click="elaphent_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/African-Elephant-71-Sutton-600.png"/>
             </Button.Background>

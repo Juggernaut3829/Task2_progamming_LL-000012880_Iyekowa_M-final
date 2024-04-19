@@ -51,23 +51,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 LastName = lastName;
                 Email = email;
                 Password = password;
-            }
-
-            // Method to demonstrate usage
-            public void DemonstrateUsage()
-            {
-                // Setting user registration details
-                SetDetails("John", "Doe", "john@example.com", "password123");
-
-                // Retrieving user registration details
-                string firstName = FirstName;
-                string lastName = LastName;
-                string email = Email;
-                string password = Password;
-
-                // Clearing user registration details
-                Clear();
-            }
+            }        
         }
     }
 

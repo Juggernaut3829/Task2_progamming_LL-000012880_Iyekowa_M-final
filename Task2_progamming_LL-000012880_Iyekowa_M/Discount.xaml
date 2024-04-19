@@ -35,11 +35,11 @@
             </Button.Background>
         </Button>
         <Image HorizontalAlignment="Left" Height="104" Margin="57,141,0,0" VerticalAlignment="Top" Width="187" Source="/african-lion-portrait-warm-light.jpg"/>
-        <Rectangle HorizontalAlignment="Left" Height="104" Margin="242,141,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
-        <Rectangle HorizontalAlignment="Left" Height="2" Margin="247,174,0,0" Stroke="Black" VerticalAlignment="Top" Width="295"/>
+        <Rectangle HorizontalAlignment="Left" Height="104" Margin="242,141,0,0" Stroke="Black" VerticalAlignment="Top" Width="275"/>
+        <Rectangle HorizontalAlignment="Left" Height="2" Margin="247,174,0,0" Stroke="Black" VerticalAlignment="Top" Width="270"/>
         <Label Content="Save up to 25% off on Day Pass " HorizontalAlignment="Left" Height="28" Margin="256,147,0,0" VerticalAlignment="Top" Width="204" FontWeight="Bold"/>
         <Label Content="When you spend £20" HorizontalAlignment="Left" Height="37" Margin="244,180,0,0" VerticalAlignment="Top" Width="139"/>
-        <Button Name="priceOff" Content="" HorizontalAlignment="Left" Height="104" Margin="57,142,0,0" VerticalAlignment="Top" Width="485" BorderBrush="{x:Null}" Background="{x:Null}" Click="priceOff_Click"/>
+        <Button Name="priceOff" Content="" HorizontalAlignment="Left" Height="104" Margin="57,142,0,0" VerticalAlignment="Top" Width="457" BorderBrush="{x:Null}" Background="{x:Null}" Click="priceOff_Click"/>
 
         <Image HorizontalAlignment="Left" Height="104" Margin="57,265,0,0" VerticalAlignment="Top" Width="162" Source="/photo-tiger-600px.png"/>
         <Rectangle HorizontalAlignment="Left" Height="104" Margin="214,265,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
@@ -47,6 +47,7 @@
         <Label Content="Save up to 40% on first time at RZA " HorizontalAlignment="Left" Height="28" Margin="228,267,0,0" VerticalAlignment="Top" Width="217" FontWeight="Bold"/>
         <Label Content="When you spend £10" HorizontalAlignment="Left" Height="37" Margin="216,305,0,0" VerticalAlignment="Top" Width="139"/>
         <Button Name="discount" Content="" HorizontalAlignment="Left" Height="102" Margin="57,267,0,0" VerticalAlignment="Top" Width="457" BorderBrush="{x:Null}" Background="{x:Null}" Click="discount_Click"/>
+        <Label Content="Current Deals:" HorizontalAlignment="Left" Margin="122,110,0,0" VerticalAlignment="Top" />
 
     </Grid>
 </Window>

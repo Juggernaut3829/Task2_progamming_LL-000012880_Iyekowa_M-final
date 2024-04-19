@@ -37,6 +37,8 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 conn = new MySqlConnection(connStr);
                 conn.Open();
 
+                // Set user details using RegistrationManager
+                
                 // Use parameterized query to prevent SQL injection
                 string login = "SELECT  email, password  FROM account " +
                                "WHERE email = @email AND password = SHA2(@password, 256)";
@@ -47,7 +49,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 cmd.Parameters.AddWithValue("@password", Password.Password);
                 cmd.ExecuteReader();
                 conn.Close();
-                MessageBox.Show("Welcome back" FirstName);
+                MessageBox.Show("Welcome back(name)" );
             }
             catch (Exception ex)
             {

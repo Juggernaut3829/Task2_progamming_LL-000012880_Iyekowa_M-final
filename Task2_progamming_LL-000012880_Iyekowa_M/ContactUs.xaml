@@ -35,11 +35,7 @@
                 <ImageBrush ImageSource="/wheelchair.png"/>
             </Button.Background>
         </Button>
-        <Rectangle HorizontalAlignment="Left" Height="75" Margin="628,304,0,0" VerticalAlignment="Top" Width="145">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="/Social Media Icon Set with X.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
+
         <Button Name="send" Content="submit" HorizontalAlignment="Left" Height="37" Margin="484,323,0,0" VerticalAlignment="Top" Width="120" Click="send_Click"/>
         <TextBox Name="message" HorizontalAlignment="Left" Height="177" Margin="113,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" BorderBrush="Black"/>
         <TextBox x:Name="Email" HorizontalAlignment="Left" Height="33" Margin="113,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" BorderBrush="Black"/>
@@ -50,5 +46,6 @@
                 <ImageBrush/>
             </Label.Background>
         </Label>
+        <Image HorizontalAlignment="Left" Height="168" Margin="584,255,0,0" VerticalAlignment="Top" Width="238" Source="/Social Media Icon Set with X.png"/>
     </Grid>
 </Window>

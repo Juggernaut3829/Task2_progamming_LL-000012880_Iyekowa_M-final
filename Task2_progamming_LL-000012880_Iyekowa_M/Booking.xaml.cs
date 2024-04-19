@@ -130,7 +130,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
         }
 
-        private void booking_Click(object sender, RoutedEventArgs e)
+        private void continue_Click(object sender, RoutedEventArgs e)
         { 
             
             try
