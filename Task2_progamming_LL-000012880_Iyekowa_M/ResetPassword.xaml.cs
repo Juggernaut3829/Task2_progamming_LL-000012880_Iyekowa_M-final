@@ -108,28 +108,39 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             {
                 conn = new MySqlConnection(connStr);
                 conn.Open();
+                string updateQuery = "UPDATE account SET password = SHA2(@password, 256) WHERE email = @email";
+                MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
 
-                // Insert user details into the database
-                string check = $"INSERT INTO account (password) VALUES (SHA2(@password, 256))";
-                MySqlCommand cmd = new MySqlCommand(check, conn);
-
-                cmd.Parameters.AddWithValue("@email", Email.Text);
                 cmd.Parameters.AddWithValue("@password", Password.Password);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("reset password is successful. Please sign in.");
-                Login login = new Login();
-                login.Show();
-                this.Close(); // Close registration window after successful registration
-                
+                cmd.Parameters.AddWithValue("@email", Email.Text);
 
+                int rowsAffected = cmd.ExecuteNonQuery();
+                conn.Close();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Password reset is successful. Please sign in.");
+                    Login login = new Login();
+                    login.Show();
+                    this.Close(); // Close password reset window after successful reset
+                }
+                else
+                {
+
+                    MessageBox.Show("Password reset failed. Please check your details and try again.");
+                }
             }
             catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                MessageBox.Show("Reset password failed. Please check your details and try again.");
-            }
+                {
+                    // Log the detailed exception for further investigation
+                    MessageBox.Show(ex.ToString());
+                }
+
+
         }
+      
+    
+
         private void Account_Click(object sender, RoutedEventArgs e)
         {
             Account account = new Account();
