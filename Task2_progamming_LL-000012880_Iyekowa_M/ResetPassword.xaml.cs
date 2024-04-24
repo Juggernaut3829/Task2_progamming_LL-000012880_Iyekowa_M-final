@@ -48,7 +48,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             }
 
             // Validate password
-            if (string.IsNullOrEmpty(Pass.Password))
+            else if (string.IsNullOrEmpty(Pass.Password))
             {
                 MessageBox.Show("Please enter your new password.");
                 return false;
@@ -61,7 +61,12 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
 
             // Validate password
-            if (string.IsNullOrEmpty(Password.Password))
+            else if (string.IsNullOrEmpty(Password.Password))
+            {
+                MessageBox.Show("Please enter your new password.");
+                return false;
+            } 
+            else if (string.IsNullOrEmpty(Pass.Password))
             {
                 MessageBox.Show("Please enter your new password.");
                 return false;
@@ -71,6 +76,8 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 MessageBox.Show("password must be at least 6 characters long.");
                 return false;
             }
+
+          
 
             return true;
         }
@@ -110,7 +117,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 cmd.Parameters.AddWithValue("@password", Password.Password);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Registration successful. Please sign in.");
+                MessageBox.Show("reset password is successful. Please sign in.");
                 Login login = new Login();
                 login.Show();
                 this.Close(); // Close registration window after successful registration

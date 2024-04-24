@@ -17,19 +17,32 @@
         <Rectangle HorizontalAlignment="Left" Height="1" Margin="130,101,0,0" Stroke="Black" VerticalAlignment="Top" Width="695"/>
 
         <Rectangle HorizontalAlignment="Left" Height="1" Margin="130,101,0,0" Stroke="Black" VerticalAlignment="Top" Width="695"/>
-        <Button Name="Account" Content="Account" HorizontalAlignment="Left" Height="31" Margin="145,65,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Account_Click"/>
-        <Button Name="Map" Content="Map" HorizontalAlignment="Left" Height="31" Margin="219,65,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Map_Click"/>
-        <Button Name="Book" Content="Booking" HorizontalAlignment="Left" Height="31" Margin="281,65,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Book_Click"/>
-        <Button Name="Vist" Content="Visiting" HorizontalAlignment="Left" Height="31" Margin="355,65,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Vist_Click"/>
-        <Button Name="History" Content="About us" HorizontalAlignment="Left" Height="31" Margin="431,65,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="History_Click"/>
-        <Button Name="Articles" Content="Infomation" HorizontalAlignment="Left" Height="31" Margin="504,65,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Articles_Click"/>
-        <Button Name="Login" Content="Login" HorizontalAlignment="Left" Height="31" Margin="600,65,0,0" VerticalAlignment="Top" Width="61" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Login_Click"/>
-        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="665,65,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
-        <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Home_Click"/>
-        <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,394,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF0C21D0" FontWeight="Bold" Click="Deal_Click"/>
-        <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,394,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Message_Click"/>
-        <Button Name="Policcy" Content="Policy" HorizontalAlignment="Left" Height="30" Margin="401,395,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Policy_Click"/>
-        <Button Name="Ts_and_Cs" Content="Terms and Conditions" HorizontalAlignment="Left" Height="31" Margin="450,395,0,0" VerticalAlignment="Top" Width="134" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Ts_and_Cs_Click"/>
+        <Button Name="Account" Content="Account" HorizontalAlignment="Left" Height="31" Margin="145,65,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}"
+                Background="{x:Null}" FontWeight="Bold" Click="Account_Click"/>
+        <Button Name="Map" Content="Map" HorizontalAlignment="Left" Height="31" Margin="219,65,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}"
+                Background="{x:Null}" FontWeight="Bold" Click="Map_Click"/>
+        <Button Name="Book" Content="Booking" HorizontalAlignment="Left" Height="31" Margin="281,65,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Book_Click"/>
+        <Button Name="Vist" Content="Visiting" HorizontalAlignment="Left" Height="31" Margin="355,65,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}"
+                Background="{x:Null}" FontWeight="Bold" Click="Vist_Click"/>
+        <Button Name="History" Content="About us" HorizontalAlignment="Left" Height="31" Margin="431,65,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}"
+                Background="{x:Null}" FontWeight="Bold" Click="History_Click"/>
+        <Button Name="Articles" Content="Infomation" HorizontalAlignment="Left" Height="31" Margin="504,65,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}"
+                Background="{x:Null}" FontWeight="Bold" Click="Articles_Click"/>
+        <Button Name="Login" Content="Login" HorizontalAlignment="Left" Height="31" Margin="600,65,0,0" VerticalAlignment="Top" Width="61" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Login_Click"/>
+        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="665,65,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}"
+                Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
+        <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Home_Click"/>
+        <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,394,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" 
+                Background="{x:Null}"  FontWeight="Bold" Click="Deal_Click"/>
+        <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,394,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}"
+                Background="{x:Null}" FontWeight="Bold" Click="Message_Click"/>
+        <Button Name="Policcy" Content="Policy" HorizontalAlignment="Left" Height="30" Margin="401,395,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}"
+                Background="{x:Null}" Foreground="#FF0C21D0 " FontWeight="Bold" Click="Policy_Click"/>
+        <Button Name="Ts_and_Cs" Content="Terms and Conditions" HorizontalAlignment="Left" Height="31" Margin="450,395,0,0" VerticalAlignment="Top" Width="134" 
+                BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Ts_and_Cs_Click"/>
         <Button Name="access" Content="" HorizontalAlignment="Left" Height="35" Margin="739,388,0,0" VerticalAlignment="Top" Width="42"  BorderBrush="{x:Null}" FontWeight="Bold" Click="access_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/wheelchair.png"/>
@@ -37,18 +50,30 @@
         </Button>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalAlignment="Top" Width="615" HorizontalAlignment="Left" Height="248" Margin="145,107,0,0">
                 <TextBlock  TextWrapping="Wrap" ><LineBreak/><Run Text="Privacy Policy"/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="At Riget Zoo Adventures, we are committed to protecting your privacy and ensuring the security of your personal information. This privacy policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our visiting system."/><LineBreak/><Run/>
+                    <LineBreak/><Run Text="At Riget Zoo Adventures, we are committed to protecting your privacy and ensuring the security of your personal information.
+                                     This privacy policy outlines how we collect, use, disclose, and safeguard your information when you visit our website or use our visiting system."/><LineBreak/><Run/>
                     <LineBreak/><Run Text="Information We Collect"/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="Personal Information: When you book tickets or register for our visiting system, we may collect personal information such as your name, email address, phone number, and billing details."/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="Usage Information: We may collect information about your interactions with our website and visiting system, including the pages you visit, the date and time of your visits, and the duration of your session."/><LineBreak/><Run/>
+                    <LineBreak/><Run Text="Personal Information: When you book tickets or register for our visiting system,
+                                     we may collect personal information such as your name, email address, phone number, and billing details."/><LineBreak/><Run/>
+                    <LineBreak/><Run Text="Usage Information: We may collect information about your interactions with our website and visiting system,
+                                     including the pages you visit, the date and time of your visits, and the duration of your session."/><LineBreak/><Run/>
                     <LineBreak/><Run Text="How We Use Your Information"/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="To Process Bookings: We use the information you provide to process your bookings, confirm your reservations, and communicate with you about your visit."/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="To Improve Our Services: We may use your information to analyze user trends, track user interactions, and improve the functionality and user experience of our visiting system."/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="To Send Promotional Communications: With your consent, we may send you promotional emails about upcoming events, special offers, and other relevant information."/><LineBreak/><Run/><LineBreak/><Run Text="Data Security"/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="We are committed to protecting the security of your information and have implemented appropriate technical and organizational measures to safeguard your data against unauthorized access, disclosure, alteration, and destruction."/><LineBreak/><Run/><LineBreak/><Run Text="Disclosure of Information"/><LineBreak/><Run/><LineBreak/><Run Text="We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as required by law or as necessary to provide our services. We may share your information with trusted third-party service providers who assist us in operating our website, conducting business, or servicing you."/><LineBreak/><Run/>
+                    <LineBreak/><Run Text="To Process Bookings: We use the information you provide to process your bookings, confirm your reservations
+                                     , and communicate with you about your visit."/><LineBreak/><Run/>
+                    <LineBreak/><Run Text="To Improve Our Services: We may use your information to analyze user trends, track user interactions, 
+                                     and improve the functionality and user experience of our visiting system."/><LineBreak/><Run/>
+                    <LineBreak/><Run Text="To Send Promotional Communications: With your consent, we may send you promotional emails about upcoming events, 
+                                     special offers, and other relevant information."/><LineBreak/><Run/><LineBreak/><Run Text="Data Security"/><LineBreak/><Run/>
+                    <LineBreak/><Run Text="We are committed to protecting the security of your information and have implemented appropriate technical and organizational measures to safeguard your data against unauthorized access, disclosure,
+                                     alteration, and destruction."/><LineBreak/><Run/><LineBreak/><Run Text="Disclosure of Information"/><LineBreak/><Run/><LineBreak/><Run Text="We do not sell, trade, or otherwise transfer
+                                     your personal information to third parties without your consent, except as required by law or as necessary to provide our services.
+                                     We may share your information with trusted third-party service providers who assist us in operating our website, conducting business, or servicing you."/><LineBreak/><Run/>
                     <LineBreak/><Run Text="Your Choices"/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="You have the right to access, update, or delete your personal information at any time. You may also opt out of receiving promotional communications from us by following the instructions provided in our emails or by contacting us directly."/><LineBreak/><Run/>
-                    <LineBreak/><Run Text="Changes to This Policy"/><LineBreak/><Run/><LineBreak/><Run Text="We reserve the right to update or revise this privacy policy at any time. We will notify you of any changes by posting the new policy on this page. It is your responsibility to review this policy periodically for updates."/></TextBlock>
+                    <LineBreak/><Run Text="You have the right to access, update, or delete your personal information at any time.
+                                     You may also opt out of receiving promotional communications from us by following the instructions provided in our emails or by contacting us directly."/><LineBreak/><Run/>
+                    <LineBreak/><Run Text="Changes to This Policy"/><LineBreak/><Run/><LineBreak/><Run Text="We reserve the right to update or revise this privacy policy at any time.
+                                                                                                       We will notify you of any changes by posting the new policy on this page.
+                                                                                                       It is your responsibility to review this policy periodically for updates."/></TextBlock>
 
             </ScrollViewer>
     </Grid>

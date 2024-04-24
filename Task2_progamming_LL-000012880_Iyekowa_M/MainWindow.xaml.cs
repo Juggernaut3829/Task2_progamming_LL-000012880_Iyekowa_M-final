@@ -25,12 +25,12 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
     {
         "/african-lion-portrait-warm-light.jpg",
         "/spotted-giraffe-close-up-looking-cute-outdoors-generated-by-ai.jpg",
-        "/male-female-lions-laying-sand-resting.jpg",
-        "/download(1).jpn",
-        "/download(2).jpn",
-        "/download(3).jpn",
-        // Add more image paths as needed
-        // Add more image paths as needed
+        "/male-female-lions-laying-sand-resting.jpg", 
+        "/wild-dog-800px.jpg",
+        "/African-Elephant-71-Sutton-600.png",
+        "/image-Rhino-Lodge-03.png",
+        "/photo-tiger-600px.png",
+        // image paths 
     };
 
         private int currentIndex = 0;

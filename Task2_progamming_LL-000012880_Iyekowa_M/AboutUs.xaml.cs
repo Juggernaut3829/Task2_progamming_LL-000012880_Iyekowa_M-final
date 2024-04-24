@@ -63,6 +63,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             info.Show();
         }
 
+
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             Login login = new Login();

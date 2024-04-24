@@ -17,19 +17,33 @@
         </Button>
         <Rectangle HorizontalAlignment="Left" Height="1" Margin="130,101,0,0" Stroke="Black" VerticalAlignment="Top" Width="695"/>
 
-        <Button Name="Account" Content="Account" HorizontalAlignment="Left" Height="31" Margin="145,65,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Account_Click"/>
-        <Button Name="Map" Content="Map" HorizontalAlignment="Left" Height="31" Margin="219,65,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Map_Click"/>
-        <Button Name="Book" Content="Booking" HorizontalAlignment="Left" Height="31" Margin="281,65,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Book_Click"/>
-        <Button Name="Vist" Content="Visiting" HorizontalAlignment="Left" Height="31" Margin="355,65,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Vist_Click"/>
-        <Button Name="History" Content="About us" HorizontalAlignment="Left" Height="31" Margin="431,65,0,0" VerticalAlignment="Top" Width="59"  Foreground="#FF0C21D0" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="History_Click"/>
-        <Button Name="Articles" Content="Infomation" HorizontalAlignment="Left" Height="31" Margin="504,65,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Articles_Click"/>
-        <Button Name="Login" Content="Login" HorizontalAlignment="Left" Height="31" Margin="600,65,0,0" VerticalAlignment="Top" Width="61" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Login_Click"/>
-        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="665,65,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
-        <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Home_Click"/>
-        <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,394,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Deal_Click"/>
-        <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,394,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Message_Click"/>
-        <Button Name="Policy" Content="Policy" HorizontalAlignment="Left" Height="30" Margin="401,395,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Policy_Click"/>
-        <Button Name="Ts_and_Cs" Content="Terms and Conditions" HorizontalAlignment="Left" Height="31" Margin="450,395,0,0" VerticalAlignment="Top" Width="134" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Ts_and_Cs_Click"/>
+        <Button Name="Account" Content="Account" HorizontalAlignment="Left" Height="31" Margin="145,65,0,0" VerticalAlignment="Top" Width="59" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Account_Click"/>
+        <Button Name="Map" Content="Map" HorizontalAlignment="Left" Height="31" Margin="219,65,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Map_Click"/>
+        <Button Name="Book" Content="Booking" HorizontalAlignment="Left" Height="31" Margin="281,65,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Book_Click"/>
+        <Button Name="Vist" Content="Visiting" HorizontalAlignment="Left" Height="31" Margin="355,65,0,0" VerticalAlignment="Top" Width="56" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Vist_Click"/>
+        <Button Name="History" Content="About us" HorizontalAlignment="Left" Height="31" Margin="431,65,0,0" VerticalAlignment="Top" Width="59"  Foreground="#FF0C21D0" 
+                BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="History_Click"/>
+        <Button Name="Articles" Content="Infomation" HorizontalAlignment="Left" Height="31" Margin="504,65,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Articles_Click"/>
+        <Button Name="Login" Content="Login" HorizontalAlignment="Left" Height="31" Margin="600,65,0,0" VerticalAlignment="Top" Width="61" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Login_Click"/>
+        <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="665,65,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
+        <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Home_Click"/>
+        <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,394,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Deal_Click"/>
+        <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,394,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" 
+                Background="{x:Null}" FontWeight="Bold" Click="Message_Click"/>
+        <Button Name="Policy" Content="Policy" HorizontalAlignment="Left" Height="30" Margin="401,395,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}"  
+                Background="{x:Null}" FontWeight="Bold" Click="Policy_Click"/>
+        <Button Name="Ts_and_Cs" Content="Terms and Conditions" HorizontalAlignment="Left" Height="31" Margin="450,395,0,0" VerticalAlignment="Top" Width="134" 
+                BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Ts_and_Cs_Click"/>
+        
         <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,106,0,55">
             <StackPanel Margin="20"  Width="608">
                 <!-- Title -->
@@ -38,31 +52,39 @@
                 <!-- Mission -->
                 <TextBlock Text="Our Mission" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
                 <TextBlock TextWrapping="Wrap">
-                    At Riget Zoo Adventures, our mission is to inspire a love for wildlife and conservation through immersive experiences and educational programs. We believe in fostering a deeper connection between humans and the natural world, promoting empathy, respect, and stewardship for all living creatures.
+                    At Riget Zoo Adventures, our mission is to inspire a love for wildlife and conservation through immersive experiences and educational programs.
+                    We believe in fostering a deeper connection between humans and the natural world, promoting empathy, respect, and stewardship for all living creatures.
                 </TextBlock>
 
                 <!-- Story -->
                 <TextBlock Text="Our Story" FontSize="18" FontWeight="Bold" Margin="0,20,0,10"/>
                 <TextBlock TextWrapping="Wrap">
-                    Riget Zoo Adventures was founded in 1995 by a group of passionate wildlife enthusiasts who wanted to create a unique destination where people of all ages could discover, learn, and be amazed by the diversity of life on Earth. What started as a modest collection of local animals has since evolved into a world-class zoo and adventure park, attracting visitors from near and far.
+                    Riget Zoo Adventures was founded in 1995 by a group of passionate wildlife enthusiasts who wanted to create a unique destination where people of all ages could discover, 
+                    learn and be amazed by the diversity of life on Earth.What started as a modest collection of local animals has since evolved into a world-class zoo and adventure park,
+                    attracting visitors from near and far.
                 </TextBlock>
 
                 <!-- Explore and Discover -->
                 <TextBlock Text="Explore and Discover" FontSize="18" FontWeight="Bold" Margin="0,20,0,10"/>
                 <TextBlock TextWrapping="Wrap">
-                    Spanning over 100 acres of pristine natural habitat, Riget Zoo Adventures is home to over 1,000 animals representing species from every corner of the globe. From majestic lions to playful otters, colorful birds to elusive reptiles, our zoo offers a captivating journey through the animal kingdom.
+                    Spanning over 100 acres of pristine natural habitat, Riget Zoo Adventures is home to over 1,000 animals representing species from every corner of the globe. 
+                    From majestic lions to playful otters, colorful birds to elusive reptiles, our zoo offers a captivating journey through the animal kingdom.
                 </TextBlock>
 
                 <!-- Conservation and Education -->
                 <TextBlock Text="Conservation and Education" FontSize="18" FontWeight="Bold" Margin="0,20,0,10"/>
                 <TextBlock TextWrapping="Wrap">
-                    As stewards of the natural world, conservation is at the heart of everything we do. Through our various conservation initiatives and partnerships with wildlife organizations, we are committed to protecting endangered species, preserving habitats, and promoting sustainable practices. Our educational programs, guided tours, and interactive exhibits aim to raise awareness about the importance of biodiversity and inspire future generations of conservationists.
+                    As stewards of the natural world, conservation is at the heart of everything we do.
+                    Through our various conservation initiatives and partnerships with wildlife organizations, we are committed to protecting endangered species, 
+                    preserving habitats, and promoting sustainable practices. Our educational programs, guided tours, 
+                    and interactive exhibits aim to raise awareness about the importance of biodiversity and inspire future generations of conservationists.
                 </TextBlock>
 
                 <!-- Your Adventure Awaits -->
                 <TextBlock Text="Your Adventure Awaits" FontSize="18" FontWeight="Bold" Margin="0,20,0,10"/>
                 <TextBlock TextWrapping="Wrap">
-                    Whether you're embarking on a safari adventure, attending a wildlife workshop, or simply enjoying a leisurely stroll through our lush gardens, there's something for everyone at Riget Zoo Adventures. Join us as we embark on a journey of discovery, exploration, and conservation.
+                    Whether you're embarking on a safari adventure, attending a wildlife workshop, or simply enjoying a leisurely stroll through our lush gardens,
+                    there's something for everyone at Riget Zoo Adventures. Join us as we embark on a journey of discovery, exploration, and conservation.
                 </TextBlock>
             </StackPanel>
         </ScrollViewer>

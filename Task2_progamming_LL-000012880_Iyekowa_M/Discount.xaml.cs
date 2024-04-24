@@ -122,7 +122,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
         private void discount_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("promotion has been aplied when you check out");
+            MessageBox.Show("promotion has been aplied when you check out,thank you for chooseing Reget Zoo Adventure!");
         }
 
         private void priceOff_Click(object sender, RoutedEventArgs e)

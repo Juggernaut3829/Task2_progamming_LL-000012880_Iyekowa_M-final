@@ -30,10 +30,58 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         {
             InitializeComponent();
         }
+        private bool ValidateInput()
+        {
+            // Basic validation for required fields
+           
+            // Validate email
+            if (string.IsNullOrEmpty(Email.Text))
+            {
+                MessageBox.Show("Please enter your email.");
+                return false;
+            }
+            else if (!IsValidEmail(Email.Text))
+            {
+                MessageBox.Show("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate password
+            else if (string.IsNullOrEmpty(Password.Password))
+            {
+                MessageBox.Show("Please enter your password.");
+                return false;
+            }
+            else if (Password.Password.Length < 6)
+            {
+                MessageBox.Show("Password must be at least 6 characters long.");
+                return false;
+            } 
+            
+            return true;
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         private void btnsend_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                if (!ValidateInput())
+                {
+                    return; // Input validation failed, do not proceed with registration
+                }
+
                 conn = new MySqlConnection(connStr);
                 conn.Open();
 
@@ -47,9 +95,10 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 // Use parameters to avoid SQL injection and improve security
                 cmd.Parameters.AddWithValue("@email", Email.Text);
                 cmd.Parameters.AddWithValue("@password", Password.Password);
-                cmd.ExecuteReader();
+                cmd.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Welcome back(name)" );
+                MessageBox.Show("Welcome back, arrange a visit?booking with Riget Zoo Adventures" );
+
             }
             catch (Exception ex)
             {

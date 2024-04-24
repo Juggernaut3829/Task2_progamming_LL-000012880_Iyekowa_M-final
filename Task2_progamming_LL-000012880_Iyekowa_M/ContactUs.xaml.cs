@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace Task2_progamming_LL_000012880_Iyekowa_M
 {
@@ -128,66 +129,72 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             account.Show();
 
         }
-        private bool ValidateInput()
-        { 
-            // Validate password
-            if (string.IsNullOrEmpty(Email.Text))
+        private bool ValidateEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
             {
                 MessageBox.Show("Please enter your email.");
                 return false;
             }
-            else if (Email.Text.Contains("@"))
+            else if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
-                MessageBox.Show("email must contain a @.");
+                MessageBox.Show("Please enter a valid email address.");
                 return false;
             }
+            return true;
+        }
 
-            if (string.IsNullOrEmpty(message.Text))
+        private bool ValidateMessage(string message)
+        {
+            if (string.IsNullOrEmpty(message))
             {
-                MessageBox.Show("Please enter your email.");
+                MessageBox.Show("Please enter your message.");
                 return false;
             }
-            else if (message.Text.Length < 10)
+            else if (message.Length < 10)
             {
                 MessageBox.Show("The message must contain a minimum of 10 characters.");
-                MessageBox.Show("Please write a message that fits that critira.");
                 return false;
             }
-
             return true;
-
         }
+
+        private bool ValidateInput()
+        {
+            if (!ValidateEmail(Email.Text) || !ValidateMessage(message.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
         private void send_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (!ValidateInput())
+            {
+                return;
+            }
 
-            // If validation passes, proceed with registration
             try
             {
-                conn = new MySqlConnection(connStr);
-                conn.Open();
-
-                // Insert user details into the database
-                string check = $"INSERT INTO contact (Email,Message) VALUES (@email, @message)";
-                MySqlCommand cmd = new MySqlCommand(check, conn);
-
-                cmd.Parameters.AddWithValue("@email", Email.Text);
-                cmd.Parameters.AddWithValue("@message", message.Text);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Message has been sent");
-                MessageBox.Show("Replies normally take 3-5 business days.we ask that you wait patiently until we can get back in contact with you");
-                MessageBox.Show("We ask that you wait patiently until we can get back in contact with you");
-
-                // Close registration window after successful registration
-               
+                using (conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO contact (Email,Message) VALUES (@email, @message)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@email", Email.Text);
+                        cmd.Parameters.AddWithValue("@message", message.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Message has been sent. Replies normally take 3-5 business days. We ask that you wait patiently until we can get back in contact with you.");
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
-                MessageBox.Show("message failed to be sent. Please check your details and try again.");
+                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Message failed to be sent. Please check your details and try again.");
             }
-
         }
 
     }

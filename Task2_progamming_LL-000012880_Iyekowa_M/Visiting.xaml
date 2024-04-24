@@ -34,13 +34,14 @@
                 <ImageBrush ImageSource="/wheelchair.png"/>
             </Button.Background>
         </Button>
-        <Label Content="Date:" HorizontalAlignment="Left" Height="30" Margin="289,129,0,0" VerticalAlignment="Top" Width="142"/>
-        <Label  Content="Type:" HorizontalAlignment="Left" Height="26" Margin="289,214,0,0" VerticalAlignment="Top" Width="72"/>
-        <Label Content="Number of guests:" HorizontalAlignment="Left" Height="28" Margin="289,282,0,0" VerticalAlignment="Top" Width="168"/>
-        <TextBox  Name="NumTB" HorizontalAlignment="Left" Height="30" Margin="289,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"  BorderBrush="Black"/>
-        <ComboBox Name="Type" HorizontalAlignment="Left" Height="32" Margin="289,245,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="Type_SelectionChanged"/>
-        <Button Name="booking" Content="continue" HorizontalAlignment="Left" Height="26" Margin="289,344,0,0" VerticalAlignment="Top" Width="168" Click="continue_Click"/>
-        <DatePicker Name="Date" HorizontalAlignment="Left" Height="45" Margin="289,164,0,0" VerticalAlignment="Top" Width="168"/>
+        <Label Content="Date:" HorizontalAlignment="Left" Height="30" Margin="308,136,0,0" VerticalAlignment="Top" Width="142"/>
+        <Label  Content="Type:" HorizontalAlignment="Left" Height="26" Margin="308,213,0,0" VerticalAlignment="Top" Width="72"/>
+        <Label Content="Number of guests:" HorizontalAlignment="Left" Height="28" Margin="308,281,0,0" VerticalAlignment="Top" Width="168"/>
+        <TextBox  Name="NumTB" HorizontalAlignment="Left" Height="30" Margin="308,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"  BorderBrush="Black"/>
+        <ComboBox Name="Type" HorizontalAlignment="Left" Height="32" Margin="308,244,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="Type_SelectionChanged"/>
+        <Button Name="booking" Content="continue" HorizontalAlignment="Left" Height="26" Margin="308,343,0,0" VerticalAlignment="Top" Width="168" Click="continue_Click"/>
+        <DatePicker Name="Date" HorizontalAlignment="Left" Height="33" Margin="308,171,0,0" VerticalAlignment="Top" Width="168"/>
+        <Label Content="Please enter Details to confirm a visiting date of your choice" HorizontalAlignment="Left"  Margin="185,101,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
 
     </Grid>
 </Window>

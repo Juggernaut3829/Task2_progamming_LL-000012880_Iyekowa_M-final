@@ -33,9 +33,6 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         }
         private bool ValidateInput()
         {
-
-          
-
             // Validate first name
             if (string.IsNullOrEmpty(FirstName.Text))
             {
@@ -112,12 +109,19 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 cmd.Parameters.AddWithValue("@lastName", LastName.Text);
                 cmd.Parameters.AddWithValue("@email", Email.Text);
                 cmd.Parameters.AddWithValue("@password", Password.Password);
-                cmd.ExecuteNonQuery();
-                 conn.Close();
-                MessageBox.Show("Registration successful. Please sign in.");
-                Login login = new Login();
-                login.Show();
-                this.Close();
+                int affectedRows = cmd.ExecuteNonQuery();
+                conn.Close();
+                if (affectedRows > 0)
+                {
+                    MessageBox.Show("Password reset successful. Please sign in with your new password.");
+                    Login login = new Login();
+                    login.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Password reset failed. Please check your email and try again.");
+                }
                 // Close registration window after successful registration
 
             }
