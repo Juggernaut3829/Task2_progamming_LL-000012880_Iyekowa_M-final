@@ -26,6 +26,8 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                   "port=3306;" +
                   "password=Notre100606";
         MySqlConnection conn;
+        private int baseBill;
+
         public Billing(int bookingID, int visitingID)
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
         private void LoadBillingInformation(int bookingID, int visitingID)
         {
+            baseBill = 50;
             try
             {
                 MySqlConnection conn = new MySqlConnection(connStr);
@@ -54,7 +57,16 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                     int accountID = reader.IsDBNull(reader.GetOrdinal("AccountID")) ? -1 : reader.GetInt32("AccountID");
                     int roomID = reader.IsDBNull(reader.GetOrdinal("RoomID")) ? -1 : reader.GetInt32("RoomID");
                     decimal bill = reader.IsDBNull(reader.GetOrdinal("Bill")) ? 0 : reader.GetDecimal("Bill");
-                    DateTime paymentDate = reader.IsDBNull(reader.GetOrdinal("PaymentDate")) ? DateTime.MinValue : reader.GetDateTime("PaymentDate");
+                    DateTime paymentDate = reader.IsDBNull(reader.GetOrdinal("PaymentDate")) ? DateTime.MinValue 
+                        : reader.GetDateTime("PaymentDate");
+
+                    // Additional features
+                    int numberOfDays = GetNumberOfDays(); // You need to implement this method to calculate the number of days
+                    decimal extraFeaturesCost = CalculateExtraFeaturesCost(); 
+                    // You need to implement this method to calculate the cost of extra features
+
+                    // Calculate total bill
+                    decimal totalBill = baseBill + extraFeaturesCost * numberOfDays;
 
                     // Update UI controls with billing information
                     InvoiceNumberTextBox.Text = invoiceNumID.ToString();
@@ -74,10 +86,27 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
+        private int GetNumberOfDays()
+        {
+            // You need to implement this method based on your business logic, e.g.,
+            // calculating the difference between check-in and check-out dates.
+            // For simplicity, let's assume it returns a hardcoded value for now.
+            return 5; // Assuming 5 days of stay
+        }
+
+        // Method to calculate the cost of extra features
+        private decimal CalculateExtraFeaturesCost()
+        {
+            // You need to implement this method based on your business logic, e.g.,
+            // summing up the costs of selected extra features.
+            // For simplicity, let's assume it returns a hardcoded value for now.
+            return 50; // Assuming $50 for extra features
+        }
 
         private void end_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Thank you for useing Regit Zoo Adventures we hope to see you soon,but for now good bye!");
+            Close();
         }
     }
 }

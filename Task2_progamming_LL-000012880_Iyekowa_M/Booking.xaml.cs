@@ -139,17 +139,14 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             
             try
             {
-                if (!ValidateInput())
-                {
-                    return; // Input validation failed, do not proceed with booking
-                }
+                
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string insert = "INSERT INTO booking (StartDate, EndDate, Style, NumAdult, NumChildren, Available) " +
                 "VALUES (@StartDate, @EndDate, @Style, @NumAdult, @NumChildren, @Available)";
                 MySqlCommand cmd = new MySqlCommand(insert, conn);
-                cmd.Parameters.AddWithValue("@StartDate", StartDate);
-                cmd.Parameters.AddWithValue("@EndDate", EndDate);
+                cmd.Parameters.AddWithValue("@StartDate", StartDate.SelectedDate);
+                cmd.Parameters.AddWithValue("@EndDate", EndDate.SelectedDate);
                 cmd.Parameters.AddWithValue("@Style", Style);
                 cmd.Parameters.AddWithValue("@NumAdult", NumAdultTB);
                 cmd.Parameters.AddWithValue("@NumChildren", NumChildrenTB);
@@ -198,9 +195,9 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         {
             try
             {
-                MySqlConnection conn = new MySqlConnection(connStr);
+                conn = new MySqlConnection(connStr);
                 conn.Open();
-                string query = "SELECT  RoomStyle FROM rooms";
+                string query = "SELECT DISTINCT RoomStyle FROM rooms";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -218,7 +215,6 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             }
         }
 
-
         private void Style_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -232,15 +228,14 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 string selectedStyle = Style.SelectedItem.ToString();
                 bool wheelchairAccessible = check.IsChecked ?? false;
 
-                string style = "SELECT RoomID, RoomName, IsWheelchairAccessible, Capacity FROM rooms WHERE RoomStyle = @Style AND IsWheelchairAccessible = @WheelchairAccessible AND Capacity >= @Capacity";
+                string style = "SELECT RoomID, RoomName, IsWheelchairAccessible, Capacity FROM rooms WHERE RoomStyle" +
+                    " = @Style AND IsWheelchairAccessible = @WheelchairAccessible AND Capacity >= @Capacity";
 
                 MySqlCommand cmd = new MySqlCommand(style, conn);
                 cmd.Parameters.AddWithValue("@Style", selectedStyle);
                 cmd.Parameters.AddWithValue("@WheelchairAccessible", wheelchairAccessible);
                 cmd.Parameters.AddWithValue("@Capacity", int.Parse(NumAdultTB.Text) + int.Parse(NumChildrenTB.Text));
-
                 Room.Items.Clear(); // Clear previous items
-
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -250,11 +245,11 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                         bool isWheelchairAccessible = reader.GetBoolean("IsWheelchairAccessible");
                         int capacity = reader.GetInt32("Capacity");
 
-                        string displayText = $"{roomName} (ID: {roomID}) - Wheelchair Accessible: {(isWheelchairAccessible ? "Yes" : "No")}, Capacity: {capacity}";
+                        string displayText = $"{roomName} (ID: {roomID}) - Wheelchair Accessible: " +
+                            $"{(isWheelchairAccessible ? "Yes" : "No")}, Capacity: {capacity}";
                         Room.Items.Add(displayText);
                     }
                 }
-
                 conn.Close();
             }
             catch (Exception ex)
