@@ -145,8 +145,8 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 }
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-                string insert = "INSERT INTO booking (StartDate, EndDate, Style, NumAdult, NumChildren, Capacity, Quantity) " +
-                             "VALUES (@StartDate, @EndDate, , @Style, @NumAdult, @NumChildren,@Available)";
+                string insert = "INSERT INTO booking (StartDate, EndDate, Style, NumAdult, NumChildren, Available) " +
+                "VALUES (@StartDate, @EndDate, @Style, @NumAdult, @NumChildren, @Available)";
                 MySqlCommand cmd = new MySqlCommand(insert, conn);
                 cmd.Parameters.AddWithValue("@StartDate", StartDate);
                 cmd.Parameters.AddWithValue("@EndDate", EndDate);
@@ -154,9 +154,12 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 cmd.Parameters.AddWithValue("@NumAdult", NumAdultTB);
                 cmd.Parameters.AddWithValue("@NumChildren", NumChildrenTB);
                 cmd.Parameters.AddWithValue("@Available", Room);
+                int BookingID = (int)cmd.LastInsertedId;
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Booking successful!");
+                 Billing billing = new Billing(BookingID, -1); // Assuming -1 for visitingID
+                billing.Show();
                 // Clear input fields or navigate to another page
                 
                 
@@ -197,7 +200,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             {
                 MySqlConnection conn = new MySqlConnection(connStr);
                 conn.Open();
-                string query = "SELECT DISTINCT RoomStyle FROM rooms";
+                string query = "SELECT  RoomStyle FROM rooms";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -220,30 +223,21 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         {
             try
             {
+                if (Style.SelectedItem == null)
+                    return;
+
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-                string selectedStyle = Style.SelectedItem?.ToString() ?? "";
-                bool wheelchairAccessible = check.IsChecked ?? false; // Check if the checkbox is checked
 
-                // Validate and parse NumAdultTB.Text
-                if (!int.TryParse(NumAdultTB.Text, out int numAdult))
-                {
-                    MessageBox.Show("Please enter a valid number for Number of Adults.");
-                    return;
-                }
+                string selectedStyle = Style.SelectedItem.ToString();
+                bool wheelchairAccessible = check.IsChecked ?? false;
 
-                // Validate and parse NumChildrenTB.Text
-                if (!int.TryParse(NumChildrenTB.Text, out int numChildren))
-                {
-                    MessageBox.Show("Please enter a valid number for Number of Children.");
-                    return;
-                }
+                string style = "SELECT RoomID, RoomName, IsWheelchairAccessible, Capacity FROM rooms WHERE RoomStyle = @Style AND IsWheelchairAccessible = @WheelchairAccessible AND Capacity >= @Capacity";
 
-                string query = "SELECT RoomID, RoomName, IsWheelchairAccessible, Capacity FROM rooms WHERE RoomStyle = @Style AND IsWheelchairAccessible = @WheelchairAccessible AND Capacity >= @Capacity";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlCommand cmd = new MySqlCommand(style, conn);
                 cmd.Parameters.AddWithValue("@Style", selectedStyle);
                 cmd.Parameters.AddWithValue("@WheelchairAccessible", wheelchairAccessible);
-                cmd.Parameters.AddWithValue("@Capacity", numAdult + numChildren);
+                cmd.Parameters.AddWithValue("@Capacity", int.Parse(NumAdultTB.Text) + int.Parse(NumChildrenTB.Text));
 
                 Room.Items.Clear(); // Clear previous items
 
@@ -268,7 +262,6 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
-
 
 
         private void Room_SelectionChanged(object sender, SelectionChangedEventArgs e)

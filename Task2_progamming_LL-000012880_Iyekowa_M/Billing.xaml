@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task2_progamming_LL_000012880_Iyekowa_M"
         mc:Ignorable="d"
-        Title="Billing" Height="300" Width="400">
+        Title="Billing" Height="300" Width="500">
     <Grid>
-        <StackPanel Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="20,20,20,20">
             <TextBlock FontSize="20" FontWeight="Bold" Margin="0 0 0 10">Billing Information</TextBlock>
             <TextBlock>Name: <TextBox x:Name="NameTextBox" Width="200" IsReadOnly="True"/></TextBlock>
             <TextBlock>Invoice Number: <TextBox x:Name="InvoiceNumberTextBox" Width="200" IsReadOnly="True"/></TextBlock>
@@ -18,5 +21,14 @@
             <TextBlock>Bill Amount: <TextBox x:Name="BillAmountTextBox" Width="200" IsReadOnly="True"/></TextBlock>
             <TextBlock>Payment Date: <TextBox x:Name="PaymentDateTextBox" Width="200" IsReadOnly="True"/></TextBlock>
         </StackPanel>
+
+        <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="194" Width="197" BorderBrush="{x:Null}" Margin="303,0,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="/safari zoo.png"/>
+            </Button.Background>
+
+        </Button>
+        <Button Name="end" Content="Close" HorizontalAlignment="Left" Height="39" Margin="426,245,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}"
+                Background="{x:Null}" FontWeight="Bold" Click="end_Click"/>
     </Grid>
 </Window>

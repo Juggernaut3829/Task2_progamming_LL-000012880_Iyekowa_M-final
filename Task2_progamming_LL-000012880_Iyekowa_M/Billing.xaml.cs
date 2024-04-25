@@ -30,6 +30,7 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         {
             InitializeComponent();
             LoadBillingInformation(bookingID, visitingID);
+
         }
 
         private void LoadBillingInformation(int bookingID, int visitingID)
@@ -72,6 +73,11 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
+        }
+
+        private void end_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Thank you for useing Regit Zoo Adventures we hope to see you soon,but for now good bye!");
         }
     }
 }

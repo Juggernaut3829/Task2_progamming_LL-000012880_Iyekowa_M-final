@@ -7,9 +7,13 @@
         mc:Ignorable="d"
         Title="Account" Height="450" Width="800">
     <Grid>
-        <Rectangle HorizontalAlignment="Center" Height="50" Margin="0,384,0,0" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="#FF1E635F"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="361*"/>
+        </Grid.RowDefinitions>
+        <Rectangle HorizontalAlignment="Center" Height="50" Margin="0,311,0,0" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="#FF1E635F" Grid.Row="1"/>
 
-        <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="194" Width="197" BorderBrush="{x:Null}" Margin="-35,-43,0,0">
+        <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="194" Width="197" BorderBrush="{x:Null}" Margin="-35,-43,0,0" Grid.RowSpan="2">
             <Button.Background>
                 <ImageBrush ImageSource="/safari zoo.png"/>
             </Button.Background>
@@ -25,45 +29,45 @@
         <Button Name="Articles" Content="Infomation" HorizontalAlignment="Left" Height="31" Margin="504,33,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Articles_Click"/>
         <Button Name="Login" Content="Login" HorizontalAlignment="Left" Height="31" Margin="600,33,0,0" VerticalAlignment="Top" Width="61" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Login_Click"/>
         <Button Name="Reg" Content="Register" HorizontalAlignment="Left" Height="31" Margin="665,33,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Reg_Click"/>
-        <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,394,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Home_Click"/>
-        <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,394,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Deal_Click"/>
-        <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,394,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Message_Click"/>
-        <Button Name="Policy" Content="Policy" HorizontalAlignment="Left" Height="30" Margin="401,395,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Policy_Click"/>
-        <Button Name="Ts_and_Cs" Content="Terms and Conditions" HorizontalAlignment="Left" Height="31" Margin="450,395,0,0" VerticalAlignment="Top" Width="134" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Ts_and_Cs_Click"/>
-        <Rectangle HorizontalAlignment="Left" Height="90" Margin="16,127,0,0" VerticalAlignment="Top" Width="94">
+        <Button Name="Home" Content="Home" HorizontalAlignment="Left" Height="31" Margin="202,321,0,0" VerticalAlignment="Top" Width="60" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Home_Click" Grid.Row="1"/>
+        <Button Name="Deal" Content="Deals" HorizontalAlignment="Left" Height="31" Margin="267,321,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Deal_Click" Grid.Row="1"/>
+        <Button Name="Message" Content="Contact us" HorizontalAlignment="Left" Height="31" Margin="331,321,0,0" VerticalAlignment="Top" Width="69" BorderBrush="{x:Null}" Background="{x:Null}" FontWeight="Bold" Click="Message_Click" Grid.Row="1"/>
+        <Button Name="Policy" Content="Policy" HorizontalAlignment="Left" Height="30" Margin="401,322,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Policy_Click" Grid.Row="1"/>
+        <Button Name="Ts_and_Cs" Content="Terms and Conditions" HorizontalAlignment="Left" Height="31" Margin="450,322,0,0" VerticalAlignment="Top" Width="134" BorderBrush="{x:Null}"  Background="{x:Null}" FontWeight="Bold" Click="Ts_and_Cs_Click" Grid.Row="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="90" Margin="16,54,0,0" VerticalAlignment="Top" Width="94" Grid.Row="1">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/NicePng_gray-circle-png_1366211.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Label Content="First" HorizontalAlignment="Left" Margin="21,222,0,0" VerticalAlignment="Top"/>
-        <Label Content="Last" HorizontalAlignment="Left" Margin="22,248,0,0" VerticalAlignment="Top"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="21,279,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password" HorizontalAlignment="Left"  Margin="21,305,0,0" VerticalAlignment="Top" />
-        <Label Content="Prior Booking" HorizontalAlignment="Left"  Margin="212,122,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" />
-        <Label Content="Current Booking" HorizontalAlignment="Left"  Margin="207,229,0,0" VerticalAlignment="Top" />
-        <Label Content="Visits" HorizontalAlignment="Left" Margin="423,127,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" />
-        <Label Content="Settings" HorizontalAlignment="Left"  Margin="618,120,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" />
-        <Label Content="Accesability panel" HorizontalAlignment="Left" Margin="618,146,0,0" VerticalAlignment="Top" />
-        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,151,0,0" VerticalAlignment="Top" />
-        <Rectangle HorizontalAlignment="Left" Height="204" Margin="200,127,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black"/>
-        <Rectangle HorizontalAlignment="Left" Height="204" Margin="400,127,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black"/>
-        <Rectangle HorizontalAlignment="Left" Height="204" Margin="600,127,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"/>
-        <Button Name="btnrest" Content="Rest password here" HorizontalAlignment="Left" Height="25" Margin="10,354,0,0" VerticalAlignment="Top" Width="125" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnrest_Click" FontWeight="Bold"/>
-        <Button Content="Blue light filter" HorizontalAlignment="Left" Height="32" Margin="618,197,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}"/>
-        <Button Content=" enlargin font size" HorizontalAlignment="Left" Height="32" Margin="618,243,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}"/>
-        <Button Content="delete accont" HorizontalAlignment="Left" Height="32" Margin="618,290,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}"/>
-        <Label Content="###" HorizontalAlignment="Left"  Margin="212,158,0,0" VerticalAlignment="Top" />
-        <Label Content="###" HorizontalAlignment="Left"  Margin="528,197,0,0" VerticalAlignment="Top" />
-        <Label Content="###" HorizontalAlignment="Left"  Margin="414,197,0,0" VerticalAlignment="Top" />
-        <Label Content="###" HorizontalAlignment="Left"  Margin="302,154,0,0" VerticalAlignment="Top" />
-        <Label Content="###" HorizontalAlignment="Left"  Margin="210,190,0,0" VerticalAlignment="Top" />
-        <Label Content="###" HorizontalAlignment="Left"  Margin="318,257,0,0" VerticalAlignment="Top" />
-        <Label Content="###" HorizontalAlignment="Left"  Margin="216,293,0,0" VerticalAlignment="Top" />
-        <Label Content="###" HorizontalAlignment="Left"  Margin="207,258,0,0" VerticalAlignment="Top" />
+        <Label Content="First" HorizontalAlignment="Left" Margin="21,149,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="Last" HorizontalAlignment="Left" Margin="22,175,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="21,206,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label Content="Password" HorizontalAlignment="Left"  Margin="21,232,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="Prior Booking" HorizontalAlignment="Left"  Margin="212,49,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Row="1" />
+        <Label Content="Current Booking" HorizontalAlignment="Left"  Margin="207,156,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="Visits" HorizontalAlignment="Left" Margin="423,54,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Row="1" />
+        <Label Content="Settings" HorizontalAlignment="Left"  Margin="618,47,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Row="1" />
+        <Label Content="Accesability panel" HorizontalAlignment="Left" Margin="618,73,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="Label" HorizontalAlignment="Left"  Margin="517,78,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Rectangle HorizontalAlignment="Left" Height="204" Margin="200,54,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black" Grid.Row="1"/>
+        <Rectangle HorizontalAlignment="Center" Height="204" Margin="0,54,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black" Grid.Row="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="204" Margin="600,54,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" Fill="Black" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="90,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Grid.Row="1"/>
+        <Button Name="btnrest" Content="Rest password here" HorizontalAlignment="Left" Height="25" Margin="10,281,0,0" VerticalAlignment="Top" Width="125" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnrest_Click" FontWeight="Bold" Grid.Row="1"/>
+        <Button Content="Blue light filter" HorizontalAlignment="Left" Height="32" Margin="618,124,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}" Grid.Row="1"/>
+        <Button Content=" enlargin font size" HorizontalAlignment="Left" Height="32" Margin="618,170,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}" Grid.Row="1"/>
+        <Button Content="delete accont" HorizontalAlignment="Left" Height="32" Margin="618,217,0,0" VerticalAlignment="Top" Width="162" BorderBrush="{x:Null}" Background="{x:Null}" Grid.Row="1"/>
+        <Label Content="###" HorizontalAlignment="Left"  Margin="212,85,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="528,124,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="414,124,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="302,81,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="210,117,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="318,184,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="216,220,0,0" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="###" HorizontalAlignment="Left"  Margin="207,185,0,0" VerticalAlignment="Top" Grid.Row="1" />
     </Grid>
 
 </Window>

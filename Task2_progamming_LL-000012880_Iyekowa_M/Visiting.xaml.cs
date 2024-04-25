@@ -56,13 +56,15 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
                    
                     cmd.Parameters.AddWithValue("@ticket", Type.SelectedItem?.ToString());
-                    cmd.Parameters.AddWithValue("@Date", Date.Text);
-
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@Date", Date.SelectedDate);
+                int VisitingID = (int)cmd.LastInsertedId;
+                cmd.ExecuteNonQuery();
                 
 
-                // Optional: Provide feedback to the user that the booking was successful
+            
                 MessageBox.Show("Booking successful!");
+                Billing billing = new Billing(VisitingID, -1); // Assuming -1 for visitingID
+                billing.Show();
             }
             catch (Exception ex)
             {
