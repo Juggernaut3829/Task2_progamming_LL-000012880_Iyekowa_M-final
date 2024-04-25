@@ -10,25 +10,41 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Margin="20,20,20,20">
-            <TextBlock FontSize="20" FontWeight="Bold" Margin="0 0 0 10">Billing Information</TextBlock>
-            <TextBlock>Name: <TextBox x:Name="NameTextBox" Width="200" IsReadOnly="True"/></TextBlock>
-            <TextBlock>Invoice Number: <TextBox x:Name="InvoiceNumberTextBox" Width="200" IsReadOnly="True"/></TextBlock>
-            <TextBlock>Account ID: <TextBox x:Name="AccountIDTextBox" Width="200" IsReadOnly="True"/></TextBlock>
-            <TextBlock>Booking ID: <TextBox x:Name="BookingIDTextBox" Width="200" IsReadOnly="True"/></TextBlock>
-            <TextBlock>Visiting ID: <TextBox x:Name="VisitingIDTextBox" Width="200" IsReadOnly="True"/></TextBlock>
-            <TextBlock>Room ID: <TextBox x:Name="RoomIDTextBox" Width="200" IsReadOnly="True"/></TextBlock>
-            <TextBlock>Bill Amount: <TextBox x:Name="BillAmountTextBox" Width="200" IsReadOnly="True"/></TextBlock>
-            <TextBlock>Payment Date: <TextBox x:Name="PaymentDateTextBox" Width="200" IsReadOnly="True"/></TextBlock>
-        </StackPanel>
-
         <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="194" Width="197" BorderBrush="{x:Null}" Margin="303,0,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="/safari zoo.png"/>
             </Button.Background>
 
         </Button>
-        <Button Name="end" Content="Close" HorizontalAlignment="Left" Height="39" Margin="426,245,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}"
+        <StackPanel Margin="20,20,20,20">
+            <TextBlock FontSize="20" FontWeight="Bold" Margin="0 0 0 10"><Run Text="Billing Information"/></TextBlock>
+            <TextBlock><Run Text="Name: "/><InlineUIContainer>
+<TextBox x:Name="NameTextBox" Width="200" IsReadOnly="True"/>
+                </InlineUIContainer></TextBlock>
+            <TextBlock><Run Text="Invoice Number: "/><InlineUIContainer>
+<TextBox x:Name="InvoiceNumberTextBox" Width="200" IsReadOnly="True"/>
+                </InlineUIContainer></TextBlock>
+            <TextBlock><Run Text="Account ID: "/><InlineUIContainer>
+<TextBox x:Name="AccountIDTextBox" Width="200" IsReadOnly="True"/>
+                </InlineUIContainer></TextBlock>
+            <TextBlock><Run Text="Booking ID: "/><InlineUIContainer>
+<TextBox x:Name="BookingIDTextBox" Width="200" IsReadOnly="True"/>
+                </InlineUIContainer></TextBlock>
+            <TextBlock><Run Text="Visiting ID: "/><InlineUIContainer>
+<TextBox x:Name="VisitingIDTextBox" Width="200" IsReadOnly="True"/>
+                </InlineUIContainer></TextBlock>
+            <TextBlock><Run Text="Room ID: "/><InlineUIContainer>
+<TextBox x:Name="RoomIDTextBox" Width="200" IsReadOnly="True"/>
+                </InlineUIContainer></TextBlock>
+            <TextBlock><Run Text="Bill Amount: "/><InlineUIContainer>
+<TextBox x:Name="BillAmountTextBox" Width="200" IsReadOnly="True"/>
+                </InlineUIContainer></TextBlock>
+            <TextBlock><Run Text="Payment Date: "/><InlineUIContainer>
+<TextBox x:Name="PaymentDateTextBox" Width="200" IsReadOnly="True"/>
+                </InlineUIContainer></TextBlock>
+        </StackPanel>
+
+        <Button x:Name="end" Content="Close" HorizontalAlignment="Left" Height="39" Margin="426,245,0,0" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}"
                 Background="{x:Null}" FontWeight="Bold" Click="end_Click"/>
     </Grid>
 </Window>
