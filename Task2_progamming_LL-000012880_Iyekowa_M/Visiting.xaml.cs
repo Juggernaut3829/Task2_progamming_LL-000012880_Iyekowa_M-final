@@ -30,6 +30,8 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         public Visiting()
         {
             InitializeComponent();
+            PopulateTicketTypes();
+           
         } 
         private void continue_Click(object sender, RoutedEventArgs e)
         {
@@ -48,14 +50,12 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                     else
                     {
                         // Handle invalid input for the number of guests
-                        MessageBox.Show("Invalid input for the number of guests.");
+                        MessageBox.Show("please enter correct details.");
                         return;
                     }
 
-                    // Assuming Type.SelectedItem.ToString() represents the selected ticket type
+                   
                     cmd.Parameters.AddWithValue("@ticket", Type.SelectedItem?.ToString());
-
-                    // Assuming Date.Text represents the selected date
                     cmd.Parameters.AddWithValue("@Date", Date.Text);
 
                     cmd.ExecuteNonQuery();
@@ -72,14 +72,12 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
 
         }
 
-        private void Type_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void PopulateTicketTypes()
         {
-
             Type.Items.Add("Single");
-            Type.Items.Add("Group"); 
+            Type.Items.Add("Group");
             Type.Items.Add("Educational trip");
             Type.Items.Add("Guided tour");
-
         }
         private void Account_Click(object sender, RoutedEventArgs e)
         {

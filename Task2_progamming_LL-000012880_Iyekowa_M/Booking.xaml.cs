@@ -32,6 +32,10 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
         public Booking()
         {
             InitializeComponent();
+            PopulateRoomStyles();
+            
+                
+            
         }
         private void Account_Click(object sender, RoutedEventArgs e)
         {
@@ -135,6 +139,10 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             
             try
             {
+                if (!ValidateInput())
+                {
+                    return; // Input validation failed, do not proceed with booking
+                }
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string insert = "INSERT INTO booking (StartDate, EndDate, Style, NumAdult, NumChildren, Capacity, Quantity) " +
@@ -183,21 +191,59 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
             return true;
         }
 
-        
+        private void PopulateRoomStyles()
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connStr);
+                conn.Open();
+                string query = "SELECT DISTINCT RoomStyle FROM rooms";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string roomStyle = reader.GetString("RoomStyle");
+                        Style.Items.Add(roomStyle);
+                    }
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+
 
         private void Style_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-         
-            
+            try
+            {
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-                string selectedStyle = Style.SelectedItem.ToString();
+                string selectedStyle = Style.SelectedItem?.ToString() ?? "";
                 bool wheelchairAccessible = check.IsChecked ?? false; // Check if the checkbox is checked
+
+                // Validate and parse NumAdultTB.Text
+                if (!int.TryParse(NumAdultTB.Text, out int numAdult))
+                {
+                    MessageBox.Show("Please enter a valid number for Number of Adults.");
+                    return;
+                }
+
+                // Validate and parse NumChildrenTB.Text
+                if (!int.TryParse(NumChildrenTB.Text, out int numChildren))
+                {
+                    MessageBox.Show("Please enter a valid number for Number of Children.");
+                    return;
+                }
+
                 string query = "SELECT RoomID, RoomName, IsWheelchairAccessible, Capacity FROM rooms WHERE RoomStyle = @Style AND IsWheelchairAccessible = @WheelchairAccessible AND Capacity >= @Capacity";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Style", selectedStyle);
                 cmd.Parameters.AddWithValue("@WheelchairAccessible", wheelchairAccessible);
-                cmd.Parameters.AddWithValue("@Capacity", int.Parse(NumAdultTB.Text) + int.Parse(NumChildrenTB.Text));
+                cmd.Parameters.AddWithValue("@Capacity", numAdult + numChildren);
 
                 Room.Items.Clear(); // Clear previous items
 
@@ -216,10 +262,14 @@ namespace Task2_progamming_LL_000012880_Iyekowa_M
                 }
 
                 conn.Close();
-            
-
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
+
+
 
         private void Room_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
